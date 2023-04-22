@@ -20,15 +20,18 @@ console.log(operators)
 
 const firstInput = calculator.shadowRoot.getElementById('first-input')
 const secondInput = calculator.shadowRoot.getElementById('second-input')
-
+console.log('click 1')
 
 for (const operator of operators) {
+  console.log('click 2')
   operator.addEventListener('click', () => {
     let a = parseInt(firstInput.value)
     let b = parseInt(secondInput.value)
     operationResult = operate(operator.value, a, b);
     updateAttribute(calculator, 'result', operationResult)
+    console.log(operator)
   })
+
 }
 
 

@@ -13,18 +13,34 @@ class Calculator extends HTMLElement {
     render() {
         this.shadowRoot.innerHTML = `
         <link rel = "stylesheet" href = "./components/calculator/style.css">
-        <h1> Calculator </h1>
-        <h2> ${this.result} </h2>
-        <div id="calculator-container">
-            <div id="input-container">
-                <input type="text" placeholder="enter a number" class="calculator-input" id = "first-input">
-                <input type="text" placeholder="enter a number" class="calculator-input" id = "second-input">
+        <div class="card">
+            <div class="tools">
+                <div class="circle">
+                    <span class="red box"></span>
+                </div>
+                <div class="circle">
+                    <span class="yellow box"></span>
+                </div>
+                <div class="circle">
+                    <span class="green box"></span>
+                </div>
             </div>
-            <div id="operations-container">
-                <button value="/" type = "button" class = "operation-button"> / </button>
-                <button value="*" type = "button" class = "operation-button"> x </button>
-                <button value="+" type = "button" class = "operation-button"> + </button>
-                <button value="-" type = "button" class = "operation-button"> - </button>
+            <div class="card__content">
+                <div id = "result"> 
+                    <h2> ${this.result} </h2>
+                </div>
+                <div id="calculator-container">
+                    <div id="input-container">
+                        <input type="text" placeholder="number" class="calculator-input" id = "first-input">
+                        <input type="text" placeholder="number" class="calculator-input" id = "second-input">
+                    </div>
+                    <div id="operations-container">
+                        <button value="/" class = "operation-button"> / </button>
+                        <button value="*" class = "operation-button"> x </button>
+                        <button value="+" class = "operation-button"> + </button>
+                        <button value="-" class = "operation-button"> - </button>
+                    </div>
+                </div>
             </div>
         </div>
         `
