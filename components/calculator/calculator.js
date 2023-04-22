@@ -25,7 +25,6 @@ class Calculator extends HTMLElement {
                 <button value="*" type = "button" class = "operation-button"> x </button>
                 <button value="+" type = "button" class = "operation-button"> + </button>
                 <button value="-" type = "button" class = "operation-button"> - </button>
-                <!--<button value="=" class = "operation-button" id = "equal-button"> = </button> -->
             </div>
         </div>
         `
